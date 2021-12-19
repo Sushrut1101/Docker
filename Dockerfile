@@ -26,3 +26,6 @@ RUN \
 # Generate an SSH Key
 ENV PASSPHRASE ""
 RUN ssh-keygen -q -t rsa -N $PASSPHRASE -f ~/.ssh/id_rsa
+
+# Working Directory
+WORKDIR /root
