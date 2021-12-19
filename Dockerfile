@@ -38,6 +38,10 @@ sudo apt install \
     cpio lzma \
     -y
 
+RUN \
+sudo pip install \
+    twrpdtgen
+
 # Use python2 as the Default python
 RUN \
 sudo ln -sf /usr/bin/python2 /usr/bin/python
