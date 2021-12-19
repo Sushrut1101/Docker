@@ -29,10 +29,6 @@ RUN \
     git config --global user.name $GIT_USERNAME \
 &&  git config --global user.email $GIT_EMAIL
 
-# Generate an SSH Key
-ENV PASSPHRASE ""
-RUN ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ${PASSPHRASE}
-
 # Install Packages
 RUN \
 sudo apt install \
