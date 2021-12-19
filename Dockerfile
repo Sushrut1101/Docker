@@ -15,9 +15,9 @@ ENV TZ Asia/Kolkata
 
 RUN \
 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata \
-ln -sf /usr/share/zoneinfo/$TZ /etc/localtime \
-apt-get install -y tzdata \
-dpkg-reconfigure --frontend noninteractive tzdata
+&& ln -sf /usr/share/zoneinfo/$TZ /etc/localtime \
+&& apt-get install -y tzdata \
+&& dpkg-reconfigure --frontend noninteractive tzdata
 
 # Install git and ssh
 RUN sudo apt install git ssh -y
@@ -27,7 +27,7 @@ ENV GIT_USERNAME Sushrut1101
 ENV GIT_EMAIL guptasushrut@gmail.com
 RUN \
     git config --global user.name $GIT_USERNAME \
-    git config --global user.email $GIT_EMAIL
+&&  git config --global user.email $GIT_EMAIL
 
 # Generate an SSH Key
 ENV PASSPHRASE ""
@@ -48,6 +48,6 @@ sudo ln -sf /usr/bin/python2 /usr/bin/python
 # Setup Android Build Environment
 RUN \
 git clone https://github.com/akhilnarang/scripts.git ~/scripts \
-cd ~/scripts \
-sudo bash setup/android_build_env.sh \
-cd -
+&& cd ~/scripts \
+&& sudo bash setup/android_build_env.sh \
+&& cd -
