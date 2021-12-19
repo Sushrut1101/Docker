@@ -41,6 +41,10 @@ sudo apt install \
     python3-pip adb fastboot jq npm neofetch mlocate \
     -y
 
+# Use python2 as the Default python
+RUN \
+sudo ln -sf /usr/bin/python2 /usr/bin/python
+
 # Setup Android Build Environment
 RUN \
 git clone https://github.com/akhilnarang/scripts.git ~/scripts \
