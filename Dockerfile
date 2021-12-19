@@ -35,6 +35,7 @@ sudo apt install \
     curl wget aria2 tmate python2 python3 silversearch* \
     nano rsync rclone tmux screen openssh-server \
     python3-pip adb fastboot jq npm neofetch mlocate \
+    cpio lzma \
     -y
 
 # Use python2 as the Default python
