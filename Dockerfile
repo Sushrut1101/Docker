@@ -22,3 +22,7 @@ ENV GIT_EMAIL guptasushrut@gmail.com
 RUN \
     git config --global user.name $GIT_USERNAME \
     git config --global user.email $GIT_EMAIL
+
+# Generate an SSH Key
+ENV PASSPHRASE ""
+RUN ssh-keygen -q -t rsa -N $PASSPHRASE -f ~/.ssh/id_rsa
