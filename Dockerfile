@@ -15,3 +15,10 @@ dpkg-reconfigure --frontend noninteractive tzdata \
 
 # Install git and ssh
 RUN sudo apt install git ssh -y
+
+# Configure git
+ENV GIT_USERNAME Sushrut1101
+ENV GIT_EMAIL guptasushrut@gmail.com
+RUN \
+    git config --global user.name $GIT_USERNAME \
+    git config --global user.email $GIT_EMAIL
