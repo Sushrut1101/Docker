@@ -40,3 +40,10 @@ sudo apt install \
     nano rsync rclone tmux screen openssh-server \
     python3-pip adb fastboot jq npm neofetch mlocate \
     -y
+
+# Setup Android Build Environment
+RUN \
+git clone https://github.com/akhilnarang/scripts.git ~/scripts \
+cd ~/scripts \
+sudo bash setup/android_build_env.sh \
+cd -
