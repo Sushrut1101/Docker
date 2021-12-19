@@ -1,6 +1,9 @@
 # Base Image: Ubuntu
 FROM ubuntu:latest
 
+# apt update
+RUN apt update
+
 # Install sudo
 RUN apt install sudo -y
 
