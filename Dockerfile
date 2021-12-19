@@ -29,3 +29,11 @@ RUN ssh-keygen -q -t rsa -N $PASSPHRASE -f ~/.ssh/id_rsa
 
 # Working Directory
 WORKDIR /root
+
+# Install Packages
+RUN \
+sudo apt install \
+    curl wget aria2 tmate python2 python3 silversearch* \
+    nano rsync rclone tmux screen openssh-server \
+    python3-pip adb fastboot jq npm neofetch mlocate \
+    -y
