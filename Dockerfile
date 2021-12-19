@@ -1,6 +1,9 @@
 # Base Image: Ubuntu
 FROM ubuntu:latest
 
+# Working Directory
+WORKDIR /root
+
 # apt update
 RUN apt update
 
@@ -29,9 +32,6 @@ RUN \
 # Generate an SSH Key
 ENV PASSPHRASE ""
 RUN ssh-keygen -q -t rsa -N $PASSPHRASE -f ~/.ssh/id_rsa
-
-# Working Directory
-WORKDIR /root
 
 # Install Packages
 RUN \
