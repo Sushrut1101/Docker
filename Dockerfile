@@ -31,7 +31,7 @@ RUN \
 
 # Generate an SSH Key
 ENV PASSPHRASE ""
-RUN ssh-keygen -q -t rsa -N $PASSPHRASE -f ~/.ssh/id_rsa
+RUN ssh-keygen -t rsa -q -f "$HOME/.ssh/id_rsa" -N ${PASSPHRASE}
 
 # Install Packages
 RUN \
