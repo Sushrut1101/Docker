@@ -8,7 +8,7 @@ WORKDIR /root
 RUN apt update
 
 # Install sudo
-RUN apt install sudo -y
+RUN apt install apt-utils sudo -y
 
 # tzdata
 ENV TZ Asia/Kolkata
