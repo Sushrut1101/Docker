@@ -43,6 +43,12 @@ RUN \
 sudo pip install \
     twrpdtgen
 
+# Install schedtool and Java
+RUN \
+    sudo apt install \
+        schedtool openjdk-8-jdk \
+    -y
+
 # Use python2 as the Default python
 RUN \
 sudo ln -sf /usr/bin/python2 /usr/bin/python
