@@ -4,6 +4,9 @@ FROM ubuntu:latest
 # Working Directory
 WORKDIR /root
 
+# Copy the Proprietary Files
+COPY ./proprietary /
+
 # apt update
 RUN apt update
 
