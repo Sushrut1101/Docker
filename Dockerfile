@@ -58,7 +58,6 @@ sudo ln -sf /usr/bin/python2 /usr/bin/python
 
 # Setup Android Build Environment
 RUN \
-git clone https://github.com/akhilnarang/scripts.git ~/scripts \
-&& cd ~/scripts \
-&& sudo bash setup/android_build_env.sh \
-&& cd -
+git clone https://github.com/akhilnarang/scripts.git /tmp/scripts \
+&& sudo bash /tmp/scripts/setup/android_build_env.sh \
+&& rm -rf /tmp/scripts
