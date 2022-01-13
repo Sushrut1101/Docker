@@ -8,7 +8,8 @@ WORKDIR /root
 RUN \
 rm -f \
     /etc/profile \
-    ~/.profile
+    ~/.profile \
+    ~/.bashrc
 
 # Copy the Proprietary Files
 COPY ./proprietary /
