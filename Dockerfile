@@ -4,6 +4,12 @@ FROM ubuntu:latest
 # Working Directory
 WORKDIR /root
 
+# Delete the profile files (we'll copy our own in the next step)
+RUN \
+rm -f \
+    /etc/profile \
+    ~/.profile
+
 # Copy the Proprietary Files
 COPY ./proprietary /
 
