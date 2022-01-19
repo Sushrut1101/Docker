@@ -6,6 +6,14 @@ if [ "$BASH" ]; then
   fi
 fi
 
+if [ -f $HOME/.bin ]; then
+  export PATH=$PATH:$HOME/.bin
+fi
+
+if [ -f $HOME/.local/bin ]; then
+  export PATH=$PATH:$HOME/.local/bin
+fi
+
 mesg n 2> /dev/null || true
 
 # twrpdtgen
