@@ -71,3 +71,6 @@ git clone https://github.com/akhilnarang/scripts.git /tmp/scripts \
 # Use python2 as the Default python
 RUN \
 sudo ln -sf /usr/bin/python2 /usr/bin/python
+
+# Run bash
+CMD ["bash"]
