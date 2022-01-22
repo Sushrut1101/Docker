@@ -52,6 +52,12 @@ sudo apt install \
     cpio lzma \
     -y
 
+# Filesystems
+RUN \
+sudo apt install \
+    erofs-utils \
+    -y
+
 RUN \
 sudo pip install \
     twrpdtgen
