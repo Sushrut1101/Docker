@@ -9,3 +9,7 @@ USER root
 
 # Working Directory
 WORKDIR /root
+
+# Install Packages
+COPY ./install_packages.sh /tmp/
+RUN bash /tmp/install_packages.sh
