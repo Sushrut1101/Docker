@@ -21,8 +21,13 @@ pip install \
 pacman -S --noconfirm \
         tmate tmux screen mlocate
 
+# Create a non-root user for AUR
+useradd -m -G wheel -s /bin/bash testuser
+echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
+
 # Setup the Android Build Environment
 git clone --depth=1 --single-branch https://github.com/akhilnarang/scripts.git /tmp/scripts
 cd /tmp/scripts
-sudo bash setup/arch-manjaro.sh
+sudo -u testuser bash setup/arch-manjaro.sh
 cd -
