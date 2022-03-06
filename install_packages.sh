@@ -34,3 +34,6 @@ sudo chmod -R a+rwx .
 sudo -u testuser bash setup/arch-manjaro.sh
 cd /root
 rm -rf /tmp/scripts
+
+# Use python2 by default
+ln -sf /usr/bin/python2 /usr/bin/python
