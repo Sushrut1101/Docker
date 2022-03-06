@@ -3,6 +3,9 @@
 # pacman alias
 alias pacman="pacman --noconfirm"
 
+# Uncomment community [multilib] repository
+sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+
 # Update
 pacman -Syyu
 
