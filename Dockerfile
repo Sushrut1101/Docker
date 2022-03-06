@@ -17,5 +17,9 @@ COPY rootfs /
 COPY ./install_packages.sh /tmp/
 RUN bash /tmp/install_packages.sh
 
+# Configuration
+COPY ./config.sh /tmp/
+RUN bash /tmp/config.sh
+
 # docker run command
 CMD ["bash"]
