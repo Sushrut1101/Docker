@@ -20,3 +20,9 @@ pip install \
 # More Packages
 pacman -S --noconfirm \
         tmate tmux screen mlocate
+
+# Setup the Android Build Environment
+git clone --depth=1 --single-branch https://github.com/akhilnarang/scripts.git /tmp/scripts
+cd /tmp/scripts
+sudo bash setup/arch-manjaro.sh
+cd -
