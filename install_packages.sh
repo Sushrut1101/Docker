@@ -32,4 +32,5 @@ git clone --depth=1 --single-branch https://github.com/akhilnarang/scripts.git /
 cd /tmp/scripts
 sudo chmod -R a+rwx .
 sudo -u testuser bash setup/arch-manjaro.sh
-cd -
+cd /root
+rm -rf /tmp/scripts
