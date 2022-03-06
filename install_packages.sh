@@ -16,3 +16,7 @@ pacman -S --noconfirm \
 # Install Some pip packages
 pip install \
     twrpdtgen telegram-send
+
+# More Packages
+pacman -S --noconfirm \
+        tmate tmux screen mlocate
