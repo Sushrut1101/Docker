@@ -4,7 +4,7 @@
 sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
 # Update
-pacman -Syyu --noconfirm
+pacman -Syy --noconfirm && pacman -Syyu --noconfirm
 
 # Install Basic Packages
 pacman -S --needed --noconfirm \
