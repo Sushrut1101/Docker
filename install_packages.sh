@@ -12,7 +12,7 @@ pacman -S --needed --noconfirm \
         python2 python3 python-pip zip unzip cmake \
         make neofetch speedtest-cli inetutils cpio \
         jdk8-openjdk lzip dpkg openssl ccache libelf \
-        base-devel
+        base-devel repo
 
 # Install Some pip packages
 pip install \
