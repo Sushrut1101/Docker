@@ -1,0 +1,7 @@
+/etc/pacman.conf
+/etc/pacman.d/mirrorlist
+/etc/locale.conf
+/etc/locale.gen
+/usr/bin/transfer
+/usr/bin/ldcheck
+/usr/bin/libneeds

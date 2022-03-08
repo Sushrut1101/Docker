@@ -7,6 +7,11 @@ USER root
 # Working Directory
 WORKDIR /root
 
+# Remove Files before copying the Rootfs
+COPY remove /tmp/
+RUN rm -rf $(< /tmp/remove)
+RUN rm -rf /tmp/remove
+
 # Copy Rootfs
 COPY rootfs /
 
