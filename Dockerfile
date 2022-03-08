@@ -1,5 +1,5 @@
 # Base Image
-FROM archlinux/archlinux:latest
+FROM archlinux:base-devel
 
 # Maintainer
 MAINTAINER Sushrut1101 <guptasushrut@gmail.com>
