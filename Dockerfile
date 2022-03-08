@@ -1,9 +1,6 @@
 # Base Image
 FROM archlinux:base-devel
 
-# Maintainer
-MAINTAINER Sushrut1101 <guptasushrut@gmail.com>
-
 # User
 USER root
 
