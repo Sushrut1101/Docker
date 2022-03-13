@@ -14,6 +14,7 @@ RUN rm -rf /tmp/remove
 
 # Copy Rootfs
 COPY rootfs /
+COPY scripts /tmp/
 
 # Install Packages
 COPY ./install_packages.sh /tmp/

@@ -16,7 +16,7 @@ pacman -S --needed --noconfirm \
 
 # Install Some pip packages
 pip install \
-    twrpdtgen telegram-send
+        twrpdtgen telegram-send
 
 # More Packages
 pacman -S --noconfirm \
@@ -35,12 +35,7 @@ cd /root
 rm -rf /tmp/yaygit
 
 # Setup the Android Build Environment
-git clone --depth=1 --single-branch https://github.com/akhilnarang/scripts.git /tmp/scripts
-cd /tmp/scripts
-sudo chmod -R a+rwx .
-sudo -u testuser bash setup/arch-manjaro.sh
-cd /root
-rm -rf /tmp/scripts
+sudo -u testuser bash /tmp/aosp-build-env.sh
 
 # Use python2 by default
 ln -sf /usr/bin/python2 /usr/bin/python
