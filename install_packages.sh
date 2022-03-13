@@ -35,7 +35,10 @@ cd /root
 rm -rf /tmp/yaygit
 
 # Setup the Android Build Environment
-sudo -u testuser bash /tmp/aosp-build-env.sh
+cd /tmp/scripts
+sudo chmod -R a+rwx .
+sudo -u testuser bash ./aosp-build-env.sh
+cd -
 
 # Use python2 by default
 ln -sf /usr/bin/python2 /usr/bin/python

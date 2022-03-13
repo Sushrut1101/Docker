@@ -13,7 +13,7 @@ RUN rm -rf $(< /tmp/remove)
 
 # Copy Rootfs and Scripts
 COPY rootfs /
-COPY scripts /tmp/
+COPY scripts /tmp/scripts/
 
 # Install Packages
 COPY ./install_packages.sh /tmp/
@@ -24,7 +24,7 @@ COPY ./config.sh /tmp/
 RUN bash /tmp/config.sh
 
 # Remove the Scripts we used
-RUN rm -rf /tmp/{{install_packages,config,aosp-build-env}.sh,remove}
+RUN rm -rf /tmp/{{install_packages,config,aosp-build-env}.sh,remove,scripts}
 
 # docker run command
 CMD ["bash"]
