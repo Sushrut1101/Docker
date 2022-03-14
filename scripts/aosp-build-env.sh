@@ -11,7 +11,7 @@ sudo pacman -Syyu --noconfirm --needed multilib-devel
 
 # Install android build prerequisites
 echo '[2/3] Installing Android building prerequisites'
-yay -S --noconfirm --needed --nopgpfetch ncurses5-compat-libs lib32-ncurses5-compat-libs aosp-devel xml2 lineageos-devel
+yay -S --noconfirm --needed --mflags "--skippgpcheck" ncurses5-compat-libs lib32-ncurses5-compat-libs aosp-devel xml2 lineageos-devel
 
 # Install adb and associated udev rules
 echo '[3/3] Installing adb convenience tools'
