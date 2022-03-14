@@ -11,15 +11,7 @@ sudo pacman -Syyu --noconfirm --needed multilib-devel
 
 # Install android build prerequisites
 echo '[2/3] Installing Android building prerequisites'
-packages="ncurses5-compat-libs lib32-ncurses5-compat-libs aosp-devel xml2 lineageos-devel"
-for package in $packages; do
-    echo "Installing $package"
-    git clone https://aur.archlinux.org/"$package"
-    cd "$package" || exit
-    makepkg -si --skippgpcheck --noconfirm --needed
-    cd - || exit
-    rm -rf "$package"
-done
+yay -S --noconfirm --needed --nopgpfetch ncurses5-compat-libs lib32-ncurses5-compat-libs aosp-devel xml2 lineageos-devel
 
 # Install adb and associated udev rules
 echo '[3/3] Installing adb convenience tools'
