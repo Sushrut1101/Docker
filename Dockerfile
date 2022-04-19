@@ -1,5 +1,5 @@
 # Base Image
-FROM archlinux/archlinux:latest
+FROM archlinux:latest
 
 # User
 USER root
