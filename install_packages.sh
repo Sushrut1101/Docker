@@ -4,7 +4,7 @@
 sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
 # Update
-pacman -Syyu --noconfirm
+pacman -Syyu --needed --noconfirm
 
 # Install Basic Packages
 pacman -S --needed --noconfirm \
@@ -12,10 +12,10 @@ pacman -S --needed --noconfirm \
 	python2 python3 python-pip zip unzip cmake \
 	make neofetch speedtest-cli inetutils cpio \
 	jdk8-openjdk lzip dpkg openssl ccache libelf \
-	base-devel repo openssh lz4 jq
+	base-devel repo openssh lz4 jq go
 
 # More Packages
-pacman -S --noconfirm \
+pacman -S --needed --noconfirm \
 	tmate tmux screen mlocate unace unrar p7zip \
 	sharutils uudeview arj cabextract file-roller \
 	dtc brotli axel gawk detox 
@@ -31,6 +31,10 @@ pip install \
 # Create a non-root user for AUR
 useradd -m -G wheel -s /bin/bash testuser
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
+go(){
+	/usr/bin/go "$@" -buildvcs=false
+}
 
 # Install yay
 git clone https://aur.archlinux.org/yay.git /tmp/yaygit
