@@ -20,7 +20,7 @@ pacman -S --needed --noconfirm \
 pacman -S --needed --noconfirm \
 	tmate tmux screen mlocate unace unrar p7zip \
 	sharutils uudeview arj cabextract file-roller \
-	dtc brotli axel gawk detox 
+	dtc brotli axel gawk detox clang
 
 # pip version
 pip --version
