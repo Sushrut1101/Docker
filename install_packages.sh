@@ -34,18 +34,6 @@ pip install \
 useradd -m -G wheel -s /bin/bash testuser
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
-go(){
-	/usr/bin/go "$@" -buildvcs=false
-}
-
-# Install yay
-git clone https://aur.archlinux.org/yay.git /tmp/yaygit
-cd /tmp/yaygit
-sudo chmod -R a+rwx .
-sudo -u testuser makepkg -si --needed --nocheck --noconfirm
-cd /root
-rm -rf /tmp/yaygit
-
 # Setup the Android Build Environment
 cd /tmp/scripts
 sudo chmod -R a+rwx .
