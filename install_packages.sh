@@ -42,7 +42,7 @@ go(){
 git clone https://aur.archlinux.org/yay.git /tmp/yaygit
 cd /tmp/yaygit
 sudo chmod -R a+rwx .
-sudo -u testuser makepkg -si --needed --noconfirm
+sudo -u testuser makepkg -si --needed --nocheck --noconfirm
 cd /root
 rm -rf /tmp/yaygit
 
