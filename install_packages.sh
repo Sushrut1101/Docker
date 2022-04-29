@@ -13,7 +13,7 @@ pacman -S --needed --noconfirm \
 	make neofetch speedtest-cli inetutils cpio \
 	jdk8-openjdk lzip dpkg openssl ccache repo \
 	libelf base-devel openssh lz4 jq go ncurses \
-	bison flex ninja uboot-tools z3
+	bison flex ninja uboot-tools z3 glibc
 
 # More Packages
 pacman -S --needed --noconfirm \
