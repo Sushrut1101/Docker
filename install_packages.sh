@@ -14,7 +14,7 @@ pacman -S --needed --noconfirm \
 	jdk8-openjdk lzip dpkg openssl ccache repo \
 	libelf base-devel openssh lz4 jq go ncurses \
 	bison flex ninja uboot-tools z3 glibc dpkg \
-	multilib-devel bc htop
+	multilib-devel bc htop python-setuptools
 
 # More Packages
 pacman -S --needed --noconfirm \
@@ -28,7 +28,8 @@ pip --version
 # Install Some pip packages
 pip install \
 	twrpdtgen telegram-send backports.lzma docopt \
-	extract-dtb protobuf pycrypto docopt zstandard
+	extract-dtb protobuf pycrypto docopt zstandard \
+	setuptools
 
 # Create a non-root user for AUR
 useradd -m -G wheel -s /bin/bash testuser
