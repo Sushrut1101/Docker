@@ -35,6 +35,10 @@ pip install \
 useradd -m -G wheel -s /bin/bash testuser
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
+# AUR Packages
+sudo -u testuser yay -S --needed --noconfirm \
+	rename
+
 # Setup the Android Build Environment
 cd /tmp/scripts
 sudo chmod -R a+rwx .
