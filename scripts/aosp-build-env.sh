@@ -15,6 +15,6 @@ yay -S --noconfirm --needed --mflags "--skippgpcheck" ncurses5-compat-libs lib32
 
 # Install adb and associated udev rules
 echo '[3/3] Installing adb convenience tools'
-sudo pacman -S --noconfirm --needed android-tools android-udev
+sudo pacman -Sy --noconfirm --needed android-tools android-udev
 
 echo 'Setup completed, enjoy'

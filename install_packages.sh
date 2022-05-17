@@ -7,7 +7,7 @@ sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 pacman -Syyu --needed --noconfirm
 
 # Install Basic Packages
-pacman -S --needed --noconfirm \
+pacman -Sy --needed --noconfirm \
 	sudo nano git curl wget rsync aria2 rclone \
 	python2 python3 python-pip zip unzip cmake \
 	make neofetch speedtest-cli inetutils cpio \
@@ -18,14 +18,14 @@ pacman -S --needed --noconfirm \
 	util-linux
 
 # More Packages
-pacman -S --needed --noconfirm \
+pacman -Sy --needed --noconfirm \
 	tmate tmux screen mlocate unace unrar p7zip \
 	sharutils uudeview arj cabextract file-roller \
 	dtc brotli axel gawk detox clang gcc gcc-libs \
 	flatpak
 
-# pip version
-pip --version
+# python and pip version
+python --version; pip --version
 
 # Install Some pip packages
 pip install \
@@ -48,4 +48,4 @@ sudo -u testuser bash ./aosp-build-env.sh
 cd -
 
 # Use python2 by default
-ln -sf /usr/bin/python2 /usr/bin/python
+ln -sf /usr/bin/python{2,}
