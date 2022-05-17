@@ -33,6 +33,10 @@ pip install \
 	extract-dtb protobuf pycrypto docopt zstandard \
 	setuptools
 
+# pip git packages
+pip install \
+	git+https://github.com/samloader/samloader.git
+
 # Create a non-root user for AUR
 useradd -m -G wheel -s /bin/bash testuser
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
