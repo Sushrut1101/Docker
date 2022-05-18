@@ -4,7 +4,7 @@
 sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
 # Update
-pacman -Syyu --needed --noconfirm
+pacman -Syyu --needed --noconfirm 2>&1 | grep -v "warning: could not get file information"
 
 # Install Basic Packages
 pacman -Sy --needed --noconfirm \
