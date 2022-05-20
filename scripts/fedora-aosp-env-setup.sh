@@ -6,7 +6,7 @@
 # environment for Fedora 31 / Rawhide.
 
 # Packages
-sud dnf install \
+sud dnf install -y \
 	android-tools autoconf213 bison	bzip2 ccache \
 	curl flex gawk gcc-c++ git glibc-devel glibc-static \
 	libstdc++-static libX11-devel make mesa-libGL-devel \
