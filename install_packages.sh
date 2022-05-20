@@ -10,7 +10,7 @@ dnf install -y \
 	unrar python3-pip tmate make cmake clang glibc
 
 # Android build Environment
-curl -sL https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/fedora.sh | bash
+bash /tmp/scripts/fedora-aosp-env-setup.sh
 
 # Use python2 by default
 ln -sf /usr/bin/python{2,}
