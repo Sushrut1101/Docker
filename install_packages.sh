@@ -11,3 +11,6 @@ dnf install -y \
 
 # Android build Environment
 curl -sL https://raw.githubusercontent.com/akhilnarang/scripts/master/setup/fedora.sh | bash
+
+# Use python2 by default
+ln -sf /usr/bin/python{2,}
