@@ -3,8 +3,8 @@
 /etc/locale.conf
 /etc/locale.gen
 /etc/profile
-/usr/bin/transfer
-/usr/bin/ldcheck
-/usr/bin/libneeds
-/usr/bin/yay
+/usr/local/bin/transfer
+/usr/local/bin/ldcheck
+/usr/local/bin/libneeds
+/usr/local/bin/yay
 /root/.bashrc
