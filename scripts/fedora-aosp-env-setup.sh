@@ -31,3 +31,6 @@ sudo curl --create-dirs -L -o /etc/udev/rules.d/51-android.rules -O -L https://r
 sudo chmod 644 /etc/udev/rules.d/51-android.rules
 sudo chown root /etc/udev/rules.d/51-android.rules
 sudo udevadm control --reload-rules
+
+# Exit
+exit 0

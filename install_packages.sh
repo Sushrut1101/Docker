@@ -17,3 +17,6 @@ bash /tmp/scripts/fedora-aosp-env-setup.sh
 
 # Use python2 by default
 ln -sf /usr/bin/python{2,}
+
+# Exit
+exit 0
