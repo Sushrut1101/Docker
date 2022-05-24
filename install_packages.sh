@@ -16,7 +16,8 @@ dnf install -y \
 	unrar python3-pip tmate make cmake clang glibc \
 	bc ag unace sharutils uudeview arj cabextract \
 	file-roller dtc brotli axel detox cpio lz4 \
-	python3-devel xz-devel speedtest-cli zsh
+	python3-devel xz-devel speedtest-cli zsh \
+	util-linux-user
 
 # zsh
 chsh -s /bin/zsh root
