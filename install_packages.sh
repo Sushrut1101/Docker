@@ -16,13 +16,16 @@ dnf install -y \
 	unrar python3-pip tmate make cmake clang glibc \
 	bc ag unace sharutils uudeview arj cabextract \
 	file-roller dtc brotli axel detox cpio lz4 \
-	python3-devel xz-devel
+	python3-devel xz-devel speedtest-cli
 
 # Android build Environment
 bash /tmp/scripts/fedora-aosp-env-setup.sh
 
 # Use python2 by default
 ln -sf /usr/bin/python{2,}
+
+# Speedtest
+ln -sf /usr/bin/speedtest{-cli,}
 
 # Exit
 exit 0
