@@ -13,4 +13,4 @@ COPY scripts /tmp/scripts/
 RUN bash /tmp/install_packages.sh
 
 # docker run command
-CMD ["bash"]
+CMD ["zsh"]

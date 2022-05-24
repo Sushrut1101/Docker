@@ -16,7 +16,11 @@ dnf install -y \
 	unrar python3-pip tmate make cmake clang glibc \
 	bc ag unace sharutils uudeview arj cabextract \
 	file-roller dtc brotli axel detox cpio lz4 \
-	python3-devel xz-devel speedtest-cli
+	python3-devel xz-devel speedtest-cli zsh
+
+# zsh
+chsh -s /bin/zsh root
+curl -sL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
 
 # Android build Environment
 bash /tmp/scripts/fedora-aosp-env-setup.sh
