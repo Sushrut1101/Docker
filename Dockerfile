@@ -7,6 +7,9 @@ USER root
 # Working Directory
 WORKDIR /root
 
+# Copy rootfs files
+COPY ./rootfs /
+
 # Install Packages
 COPY install_packages.sh /tmp/
 COPY scripts /tmp/scripts/
