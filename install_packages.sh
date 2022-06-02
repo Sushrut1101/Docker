@@ -19,6 +19,11 @@ dnf install -y \
 	python3-devel xz-devel speedtest-cli zsh \
 	util-linux-user
 
+# git configuration
+git config --global user.name Sushrut1101
+git config --global user.email guptasushrut@gmail.com
+git config --global color.ui auto
+
 # zsh
 chsh -s /bin/zsh root
 curl -sL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
