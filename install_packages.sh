@@ -51,5 +51,10 @@ sudo chmod -R a+rwx .
 sudo -u testuser bash ./aosp-build-env.sh
 cd -
 
+# Python Symlinks
+ln -sf /usr/bin/pip3.10 /usr/bin/pip3
+ln -sf /usr/bin/pip3.10 /usr/bin/pip
+ln -sf /usr/bin/python3.10 /usr/bin/python3
+
 # Use python2 by default
 ln -sf /usr/bin/python{2,}
