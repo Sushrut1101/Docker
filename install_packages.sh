@@ -15,7 +15,7 @@ pacman -Sy --needed --noconfirm \
 	libelf base-devel openssh lz4 jq go ncurses \
 	bison flex ninja uboot-tools z3 glibc dpkg \
 	multilib-devel bc htop python-setuptools   \
-	util-linux man man-pages
+	util-linux man man-pages zsh
 
 # More Packages
 pacman -Sy --needed --noconfirm \
@@ -44,6 +44,10 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 # AUR Packages
 sudo -u testuser yay -S --needed --noconfirm \
 	rename
+
+# zsh
+chsh -s /bin/zsh root
+curl -sL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
 
 # Setup the Android Build Environment
 cd /tmp/scripts
