@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# Make dnf faster
+echo "max_parallel_downloads=20" >> /etc/dnf/dnf.conf
+echo "fastestmirror=True" >> /etc/dnf/dnf.conf
+
+# dnf: Set "Y" as the default option
+echo "defaultyes=True" >> /etc/dnf/dnf.conf
+
 # Enable RPM Fusion Repos
 dnf install -y \
 	https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
