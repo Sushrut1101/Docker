@@ -31,7 +31,8 @@ python --version; pip --version
 pip install \
 	twrpdtgen telegram-send backports.lzma docopt \
 	extract-dtb protobuf pycrypto docopt zstandard \
-	setuptools
+	setuptools future requests humanize clint lz4 \
+	pycryptodome
 
 # pip git packages
 pip install \
