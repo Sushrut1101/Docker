@@ -27,4 +27,4 @@ RUN bash /tmp/config.sh
 RUN rm -rf /tmp/{{install_packages,config,aosp-build-env}.sh,remove,scripts}
 
 # docker run command
-CMD ["bash"]
+CMD ["/sbin/init", "--log-target=journal"]
