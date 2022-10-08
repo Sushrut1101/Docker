@@ -22,7 +22,7 @@ pacman -Sy --needed --noconfirm \
 	tmate tmux screen mlocate unace unrar p7zip \
 	sharutils uudeview arj cabextract file-roller \
 	dtc brotli axel gawk detox clang gcc gcc-libs \
-	flatpak
+	flatpak libxcrypt-compat
 
 # python and pip version
 python --version; pip --version
