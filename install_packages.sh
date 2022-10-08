@@ -48,7 +48,7 @@ sudo -u testuser yay -S --needed --noconfirm \
 
 # zsh
 chsh -s /bin/zsh root
-curl -sL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | bash
+sh -c "$(curl -sL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # Setup systemd
 find /etc/systemd/system /lib/systemd/system -path '*.wants/*' -not -name '*dbus*' -not -name '*journald*' -not -name '*systemd-tmpfiles*' -not -name '*systemd-user-sessions*' -exec rm -rf {} \;
