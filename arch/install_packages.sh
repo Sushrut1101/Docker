@@ -57,7 +57,7 @@ systemctl set-default multi-user.target
 # Setup the Android Build Environment
 cd /tmp/scripts
 sudo chmod -R a+rwx .
-sudo -u testuser bash ./aosp-build-env.sh
+sudo -u testuser bash ./android_build_env.sh
 cd -
 
 # Python Symlinks

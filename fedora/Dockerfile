@@ -12,7 +12,7 @@ COPY ./../common/rootfs /
 
 # Install Packages
 COPY install_packages.sh /tmp/
-COPY scripts /tmp/scripts/
+COPY ../scripts /tmp/scripts/
 RUN bash /tmp/install_packages.sh
 
 # docker run command

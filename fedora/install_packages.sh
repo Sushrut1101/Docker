@@ -36,7 +36,7 @@ chsh -s /bin/zsh root
 curl -sL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
 
 # Android build Environment
-bash /tmp/scripts/fedora-aosp-env-setup.sh
+bash /tmp/scripts/android_build_env.sh
 
 # Use python2 by default
 ln -sf /usr/bin/python{2,}
