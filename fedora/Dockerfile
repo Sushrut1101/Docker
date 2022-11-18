@@ -8,11 +8,11 @@ USER root
 WORKDIR /root
 
 # Copy rootfs files
-COPY ./../common/rootfs /
+COPY ./common/rootfs /
 
 # Install Packages
-COPY install_packages.sh /tmp/
-COPY ../scripts /tmp/scripts/
+COPY ./fedora/install_packages.sh /tmp/
+COPY ./scripts /tmp/scripts/
 RUN bash /tmp/install_packages.sh
 
 # docker run command

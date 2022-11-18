@@ -12,12 +12,11 @@ arch-docker-build:
   services:
     - docker:dind
   before_script:
-    - cd arch
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
   # Default branch leaves tag empty (= latest tag)
   # All other branches are tagged with the escaped branch name (commit ref slug)
   script:
-    - docker build --pull -t "$DOCKER_IMAGE" .
+    - docker build --pull -t "$DOCKER_IMAGE" arch/Dockerfile .
     - docker push "$DOCKER_IMAGE"
 
 fedora-docker-build:
@@ -29,10 +28,9 @@ fedora-docker-build:
   services:
     - docker:dind
   before_script:
-    - cd fedora
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
   # Default branch leaves tag empty (= latest tag)
   # All other branches are tagged with the escaped branch name (commit ref slug)
   script:
-    - docker build --pull -t "$DOCKER_IMAGE" .
+    - docker build --pull -t "$DOCKER_IMAGE" -f fedora/Dockerfile .
     - docker push "$DOCKER_IMAGE"

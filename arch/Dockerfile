@@ -12,16 +12,16 @@ COPY remove /tmp/
 RUN rm -rf $(< /tmp/remove)
 
 # Copy Rootfs and Scripts
-COPY ./rootfs /
-COPY ./../common/rootfs /
-COPY ../scripts /tmp/scripts/
+COPY ./arch/rootfs /
+COPY ./common/rootfs /
+COPY ./scripts /tmp/scripts/
 
 # Install Packages
-COPY ./install_packages.sh /tmp/
+COPY ./arch/install_packages.sh /tmp/
 RUN bash /tmp/install_packages.sh
 
 # Configuration
-COPY ./config.sh /tmp/
+COPY ./arch/config.sh /tmp/
 RUN bash /tmp/config.sh
 
 # Remove the Scripts we used
