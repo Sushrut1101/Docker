@@ -62,7 +62,6 @@ jobs:
           echo $GITHUB_TOKEN | docker login ghcr.io -u $GITHUB_USERNAME --password-stdin
 
       - name: Building the Image
-        working-directory: fedora
         run: |
           docker build -t ghcr.io/${GITHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} -f fedora/Dockerfile .
           echo -e "\033[0;32m""### Build Completed Successfully!""\033[0m"

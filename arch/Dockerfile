@@ -8,7 +8,7 @@ USER root
 WORKDIR /root
 
 # Remove Files before copying the Rootfs
-COPY remove /tmp/
+COPY ./arch/remove /tmp/
 RUN rm -rf $(< /tmp/remove)
 
 # Copy Rootfs and Scripts
