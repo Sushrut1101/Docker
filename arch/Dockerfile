@@ -12,7 +12,8 @@ COPY remove /tmp/
 RUN rm -rf $(< /tmp/remove)
 
 # Copy Rootfs and Scripts
-COPY rootfs /
+COPY ./rootfs /
+COPY ./../common/rootfs /
 COPY scripts /tmp/scripts/
 
 # Install Packages

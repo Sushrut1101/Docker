@@ -8,7 +8,7 @@ USER root
 WORKDIR /root
 
 # Copy rootfs files
-COPY ./rootfs /
+COPY ./../common/rootfs /
 
 # Install Packages
 COPY install_packages.sh /tmp/
