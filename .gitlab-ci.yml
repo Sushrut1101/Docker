@@ -1,13 +1,35 @@
-variables:
-  DOCKER_IMAGE: "$CI_REGISTRY_IMAGE:$CI_COMMIT_BRANCH"
+#
+# .gitlab-ci.yml
+#
 
-docker-build:
+variables:
+  DOCKER_IMAGE: "$CI_REGISTRY_IMAGE:$(basename $(pwd))"
+
+arch-docker-build:
   # Use the official docker image.
   image: docker:latest
   stage: build
   services:
     - docker:dind
   before_script:
+    - cd arch
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+  # Default branch leaves tag empty (= latest tag)
+  # All other branches are tagged with the escaped branch name (commit ref slug)
+  script:
+    - docker build --pull -t "$DOCKER_IMAGE" .
+    - docker push "$DOCKER_IMAGE"
+
+fedora-docker-build:
+  # Use the official docker image.
+  image: docker:latest
+  stage: build
+  variables:
+    DOCKER_IMAGE: "$CI_REGISTRY_IMAGE:latest"
+  services:
+    - docker:dind
+  before_script:
+    - cd fedora
     - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
   # Default branch leaves tag empty (= latest tag)
   # All other branches are tagged with the escaped branch name (commit ref slug)
