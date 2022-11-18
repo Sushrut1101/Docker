@@ -16,12 +16,12 @@ env:
 
   # Image name and tag. MUST be lowercase
   IMAGE_NAME: docker
-  IMAGE_TAG: arch
 
 jobs:
-  build:
+  arch:
     runs-on: ubuntu-latest
-
+    env:
+      IMAGE_TAG: arch
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -39,7 +39,34 @@ jobs:
         working-directory: arch
         run: |
           docker build -t ghcr.io/${GITHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} .
-          echo "Build Completed Successfully!"
+          echo -e "\033[0;32m""### Build Completed Successfully!""\033[0m"
+
+      - name: Pushing the Image
+        run: |
+          docker push ghcr.io/${GITHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG}
+
+  fedora:
+    runs-on: ubuntu-latest
+    env:
+      IMAGE_TAG: fedora
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Configuring git
+        run: |
+          git config --global user.name $GITHUB_USERNAME
+          git config --global user.email $GITHUB_EMAIL
+
+      - name: Logging in to Docker
+        run: |
+          echo $GITHUB_TOKEN | docker login ghcr.io -u $GITHUB_USERNAME --password-stdin
+
+      - name: Building the Image
+        working-directory: fedora
+        run: |
+          docker build -t ghcr.io/${GITHUB_USERNAME}/${IMAGE_NAME}:${IMAGE_TAG} .
+          echo -e "\033[0;32m""### Build Completed Successfully!""\033[0m"
 
       - name: Pushing the Image
         run: |
