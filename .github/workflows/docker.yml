@@ -48,7 +48,7 @@ jobs:
   fedora:
     runs-on: ubuntu-latest
     env:
-      IMAGE_TAG: fedora
+      IMAGE_TAG: latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
