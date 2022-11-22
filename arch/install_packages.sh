@@ -60,6 +60,9 @@ sudo chmod -R a+rwx .
 sudo -u testuser bash ./android_build_env.sh
 cd -
 
+# Setup Android Tools
+sudo bash /tmp/scripts/android_tools_setup.sh
+
 # Python Symlinks
 ln -sf /usr/bin/pip3.10 /usr/bin/pip3
 ln -sf /usr/bin/pip3.10 /usr/bin/pip

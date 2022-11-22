@@ -25,7 +25,7 @@ COPY ./arch/config.sh /tmp/
 RUN bash /tmp/config.sh
 
 # Remove the Scripts we used
-RUN rm -rf /tmp/{{install_packages,config,aosp-build-env}.sh,remove,scripts}
+RUN rm -rf /tmp/{{install_packages,config}.sh,remove,scripts}
 
 # docker run command
 CMD ["/sbin/init", "--log-target=journal"]

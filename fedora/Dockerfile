@@ -15,5 +15,8 @@ COPY ./fedora/install_packages.sh /tmp/
 COPY ./scripts /tmp/scripts/
 RUN bash /tmp/install_packages.sh
 
+# Remove Scripts now
+RUN rm -rf /tmp/scripts
+
 # docker run command
 CMD ["zsh"]
