@@ -46,6 +46,9 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 sudo -u testuser yay -S --needed --noconfirm \
 	rename python2
 
+# Try to update yay
+sudo -u testuser yay -S --noconfirm yay
+
 # zsh
 chsh -s /bin/zsh root
 sh -c "$(curl -sL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
