@@ -64,9 +64,7 @@ cd -
 sudo bash /tmp/scripts/android_tools_setup.sh
 
 # Python Symlinks
-ln -sf /usr/bin/pip3.10 /usr/bin/pip3
-ln -sf /usr/bin/pip3.10 /usr/bin/pip
-ln -sf /usr/bin/python3.10 /usr/bin/python3
-
-# Use python2 by default
-ln -sf /usr/bin/python{2,}
+ln -sf /usr/bin/pip3{.10,}
+ln -sf /usr/bin/pip{3.10,}
+ln -sf /usr/bin/python3{.10,}
+ln -sf /usr/bin/python{3,}

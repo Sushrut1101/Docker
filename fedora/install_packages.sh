@@ -41,9 +41,6 @@ bash /tmp/scripts/android_build_env.sh
 # Setup android_tools
 bash /tmp/scripts/android_tools_setup.sh
 
-# Use python2 by default
-ln -sf /usr/bin/python{2,}
-
 # Speedtest
 ln -sf /usr/bin/speedtest{-cli,}
 
