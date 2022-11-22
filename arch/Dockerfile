@@ -16,6 +16,9 @@ COPY ./arch/rootfs /
 COPY ./common/rootfs /
 COPY ./scripts /tmp/scripts/
 
+# Copy Prebuilt Packages
+COPY ./arch/prebuilt /tmp/packages/
+
 # Install Packages
 COPY ./arch/install_packages.sh /tmp/
 RUN bash /tmp/install_packages.sh
@@ -25,7 +28,7 @@ COPY ./arch/config.sh /tmp/
 RUN bash /tmp/config.sh
 
 # Remove the Scripts we used
-RUN rm -rf /tmp/{{install_packages,config}.sh,remove,scripts}
+RUN rm -rf /tmp/{{install_packages,config}.sh,remove,scripts,packages}
 
 # docker run command
 CMD ["/sbin/init", "--log-target=journal"]

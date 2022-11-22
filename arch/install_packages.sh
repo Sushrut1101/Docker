@@ -44,7 +44,10 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # AUR Packages
 sudo -u testuser yay -S --needed --noconfirm \
-	rename python2
+	rename
+
+# Install python2 - from AUR (Compiled)
+pacman -U --noconfirm /tmp/packages/python2-2.7.18-8-x86_64.pkg.tar.zst
 
 # Try to update yay
 sudo -u testuser yay -S --noconfirm yay
