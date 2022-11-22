@@ -119,7 +119,7 @@ elif [[ "$(command -v dnf)" != "" ]]; then
         libX11-devel.i686 mesa-libGL-devel.i686 glibc-devel.i686 \
         libstdc++.i686 libXrandr.i686 zip perl-Digest-SHA python2 wget \
         lzop openssl-devel java-1.8.0-openjdk-devel ImageMagick \
-        ncurses-compat-libs schedtool lzip vboot-utils vim
+        schedtool lzip vboot-utils vim
 
     # The package libncurses5 is not available, so we need to hack our way by symlinking the required library.
     sudo ln -s /usr/lib/libncurses.so.6 /usr/lib/libncurses.so.5

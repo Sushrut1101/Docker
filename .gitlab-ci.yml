@@ -2,13 +2,12 @@
 # .gitlab-ci.yml
 #
 
-variables:
-  DOCKER_IMAGE: "$CI_REGISTRY_IMAGE:$(basename $(pwd))"
-
 arch-docker-build:
   # Use the official docker image.
   image: docker:latest
   stage: build
+  variables:
+    DOCKER_IMAGE: "$CI_REGISTRY_IMAGE:arch"
   services:
     - docker:dind
   before_script:
@@ -16,7 +15,7 @@ arch-docker-build:
   # Default branch leaves tag empty (= latest tag)
   # All other branches are tagged with the escaped branch name (commit ref slug)
   script:
-    - docker build --pull -t "$DOCKER_IMAGE" arch/Dockerfile .
+    - docker build --pull -t "$DOCKER_IMAGE" -f arch/Dockerfile .
     - docker push "$DOCKER_IMAGE"
 
 fedora-docker-build:
@@ -34,3 +33,4 @@ fedora-docker-build:
   script:
     - docker build --pull -t "$DOCKER_IMAGE" -f fedora/Dockerfile .
     - docker push "$DOCKER_IMAGE"
+

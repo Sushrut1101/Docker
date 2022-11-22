@@ -15,6 +15,6 @@ if [[ -e "/usr/bin/apt-get" ]]; then
 elif [[ -e "/usr/bin/pacman" ]]; then
     sudo pacman -Syu --needed --noconfirm android-tools aria2 arj brotli cabextract cmake dtc gcc git lz4 xz tinyxml2 p7zip python-pip unrar sharutils unace zip unzip uudeview zip
 elif [[ -e "/usr/bin/dnf" ]]; then
-    sudo yum install --refresh android-tools aria2 arj brotli cabextract cmake dtc gcc git lz4 xz tinyxml2 p7zip python-pip unrar sharutils unace zip unzip uudeview zip
+    sudo dnf install --refresh android-tools aria2 arj brotli cabextract cmake dtc gcc git lz4 xz tinyxml2 p7zip python-pip unrar sharutils unace zip unzip uudeview zip
 fi
 pip3 install backports.lzma docopt protobuf pycrypto zstandard
