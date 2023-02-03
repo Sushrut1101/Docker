@@ -13,9 +13,9 @@ printf "\n[archlinuxcn]\n%s\n" 'Server = https://repo.archlinuxcn.org/$arch' >> 
 pacman-key --init
 
 # Install archlinuxcn keys
-pacman -S --noconfirm archlinuxcn-keyring
+pacman -Sy --noconfirm archlinuxcn-keyring
 
-# Update
+# Upgrade
 pacman -Syyu --needed --noconfirm 2>&1 | grep -v "warning: could not get file information"
 
 # Install Basic Packages
