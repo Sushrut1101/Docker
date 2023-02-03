@@ -41,7 +41,7 @@ pacman -S --noconfirm archlinuxcn/unzip
 
 # archlinuxcn packages
 pacman -S --needed --noconfirm \
-    python2
+    python2 yay
 
 # python and pip version
 python --version; pip --version
