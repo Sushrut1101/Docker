@@ -6,8 +6,14 @@ sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 # Enable Parallel Downloading
 printf "\nParallelDownloads = 20\n" >> /etc/pacman.conf
 
+# Enable the archlinuxcn repo
+printf "\n[archlinuxcn]\n%s\n" 'Server = https://repo.archlinuxcn.org/$arch' >> /etc/pacman.conf
+
 # Update
 pacman -Syyu --needed --noconfirm 2>&1 | grep -v "warning: could not get file information"
+
+# Fix archlinuxcn
+pacman -S archlinuxcn-keyring
 
 # Install Basic Packages
 pacman -Sy --needed --noconfirm \
