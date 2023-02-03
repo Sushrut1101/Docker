@@ -9,6 +9,9 @@ printf "\nParallelDownloads = 20\n" >> /etc/pacman.conf
 # Enable the archlinuxcn repo
 printf "\n[archlinuxcn]\n%s\n" 'Server = https://repo.archlinuxcn.org/$arch' >> /etc/pacman.conf
 
+# Generate pacman keys
+pacman-key --init
+
 # Install archlinuxcn keys
 pacman -S --noconfirm archlinuxcn-keyring
 
