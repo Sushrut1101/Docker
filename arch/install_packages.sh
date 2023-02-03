@@ -18,13 +18,13 @@ pacman -S archlinuxcn-keyring
 # Install Basic Packages
 pacman -Sy --needed --noconfirm \
 	sudo nano git curl wget rsync aria2 rclone \
-	python3 python-pip zip unzip cmake make \
+	python3 python-pip zip systemd cmake make \
 	neofetch speedtest-cli inetutils cpio repo \
 	jdk8-openjdk lzip dpkg openssl ccache dbus \
 	libelf base-devel openssh lz4 jq go ncurses \
 	bison flex ninja uboot-tools z3 glibc dpkg \
 	multilib-devel bc htop python-setuptools   \
-	util-linux man-pages zsh systemd dbus
+	util-linux man-pages zsh dbus
 
 # More Packages
 pacman -Sy --needed --noconfirm \
@@ -32,6 +32,9 @@ pacman -Sy --needed --noconfirm \
 	sharutils uudeview arj cabextract file-roller \
 	dtc brotli axel gawk detox clang gcc gcc-libs \
 	flatpak libxcrypt-compat
+
+# Downgrade `unzip` - from archlinuxcn
+pacman -S --noconfirm archlinuxcn/unzip
 
 # python and pip version
 python --version; pip --version
