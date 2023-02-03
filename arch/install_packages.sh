@@ -3,6 +3,9 @@
 # Uncomment community [multilib] repository
 sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
 
+# Enable Parallel Downloading
+printf "\nParallelDownloads = 20\n" >> /etc/pacman.conf
+
 # Update
 pacman -Syyu --needed --noconfirm 2>&1 | grep -v "warning: could not get file information"
 
