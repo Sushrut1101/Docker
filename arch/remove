@@ -1,7 +1,3 @@
-/etc/pacman.conf
-/etc/pacman.d/mirrorlist
-/etc/locale.conf
-/etc/locale.gen
 /etc/profile
 /usr/local/bin/transfer
 /usr/local/bin/ldcheck
