@@ -16,9 +16,6 @@ COPY ./arch/rootfs /
 COPY ./common/rootfs /
 COPY ./scripts /tmp/scripts/
 
-# Copy Prebuilt Packages
-COPY ./arch/prebuilt /tmp/packages/
-
 # Install Packages
 COPY ./arch/install_packages.sh /tmp/
 RUN bash /tmp/install_packages.sh

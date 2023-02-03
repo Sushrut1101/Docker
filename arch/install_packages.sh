@@ -39,6 +39,10 @@ pacman -Sy --needed --noconfirm \
 # Downgrade `unzip` - from archlinuxcn
 pacman -S --noconfirm archlinuxcn/unzip
 
+# archlinuxcn packages
+pacman -S --needed --noconfirm \
+    python2
+
 # python and pip version
 python --version; pip --version
 
@@ -60,9 +64,6 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 # AUR Packages
 sudo -u testuser yay -S --needed --noconfirm \
 	rename
-
-# Install python2 - from AUR (Compiled)
-pacman -U --noconfirm /tmp/packages/python2-2.7.18-8-x86_64.pkg.tar.zst
 
 # Try to update yay
 sudo -u testuser yay -S --noconfirm yay
