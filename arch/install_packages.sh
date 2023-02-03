@@ -13,7 +13,7 @@ printf "\n[archlinuxcn]\n%s\n" 'Server = https://repo.archlinuxcn.org/$arch' >> 
 pacman -Syyu --needed --noconfirm 2>&1 | grep -v "warning: could not get file information"
 
 # Fix archlinuxcn
-pacman -S archlinuxcn-keyring
+pacman -S --noconfirm archlinuxcn-keyring
 
 # Install Basic Packages
 pacman -Sy --needed --noconfirm \
