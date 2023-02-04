@@ -84,3 +84,6 @@ cd -
 
 # Setup Android Tools
 sudo bash /tmp/scripts/android_tools_setup.sh
+
+# Replace vim with neovim
+ln -sf /usr/bin/{n,}vim

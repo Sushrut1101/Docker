@@ -44,5 +44,8 @@ bash /tmp/scripts/android_tools_setup.sh
 # Speedtest
 ln -sf /usr/bin/speedtest{-cli,}
 
+# Replace vim with neovim
+ln -sf /usr/bin/{n,}vim
+
 # Exit
 exit 0
