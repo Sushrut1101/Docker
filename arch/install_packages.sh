@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Uncomment community [multilib] repository
-sed -i "/\[multilib\]/,/Include/"'s/^#//' /etc/pacman.conf
+# Enable the community [multilib] repository
+printf "\n[multilib]\n%s\n" 'Include = /etc/pacman.d/mirrorlist' >> /etc/pacman.conf
 
 # Enable Parallel Downloading
 printf "\nParallelDownloads = 20\n" >> /etc/pacman.conf
