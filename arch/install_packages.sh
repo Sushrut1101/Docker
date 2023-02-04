@@ -37,7 +37,7 @@ pacman -Sy --needed --noconfirm \
 	flatpak libxcrypt-compat
 
 # Downgrade `unzip` - from archlinuxcn
-pacman -S --noconfirm archlinuxcn/unzip
+yes | pacman -S archlinuxcn/unzip
 
 # archlinuxcn packages
 pacman -S --needed --noconfirm \
