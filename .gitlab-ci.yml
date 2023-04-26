@@ -1,6 +1,7 @@
 #
 # .gitlab-ci.yml
 #
+#
 
 arch-docker-build:
   # Use the official docker image.
