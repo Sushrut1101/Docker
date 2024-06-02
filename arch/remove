@@ -2,5 +2,5 @@
 /usr/local/bin/transfer
 /usr/local/bin/ldcheck
 /usr/local/bin/libneeds
-/usr/local/bin/apktool{,.jar}
+/usr/local/bin/apktool
 /root/.bashrc

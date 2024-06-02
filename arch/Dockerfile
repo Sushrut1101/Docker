@@ -24,6 +24,9 @@ RUN bash /tmp/install_packages.sh
 COPY ./arch/config.sh /tmp/
 RUN bash /tmp/config.sh
 
+# Run Common script
+RUN bash /tmp/scripts/common.sh
+
 # Remove the Scripts we used
 RUN rm -rf /tmp/{{install_packages,config}.sh,remove,scripts,packages}
 
