@@ -24,7 +24,7 @@ dnf install -y \
 	bc ag unace sharutils uudeview arj cabextract \
 	file-roller dtc brotli axel detox cpio lz4 \
 	python3-devel xz-devel speedtest-cli zsh \
-	util-linux-user neovim
+	util-linux-user neovim pipx
 
 # git configuration
 git config --global user.name Sushrut1101
