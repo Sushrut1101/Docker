@@ -12,6 +12,9 @@ printf "\n[archlinuxcn]\n%s\n" 'Server = https://repo.archlinuxcn.org/$arch' >> 
 # Generate pacman keys
 pacman-key --init
 
+# Sign archlinuxcn keys
+pacman-key --lsign-key "farseerfc@archlinux.org"
+
 # Install archlinuxcn keys
 pacman -Sy --noconfirm archlinuxcn-keyring
 
