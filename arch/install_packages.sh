@@ -43,6 +43,10 @@ yes | pacman -S archlinuxcn/unzip
 pacman -S --needed --noconfirm \
     python2 yay
 
+# Use pipx instead of pip
+ln -sf /usr/bin/pipx /usr/local/bin/pip
+ln -sf /usr/bin/pipx /usr/local/bin/pip3
+
 # python and pip version
 python --version; pip --version
 

@@ -26,6 +26,10 @@ dnf install -y \
 	python3-devel xz-devel speedtest-cli zsh \
 	util-linux-user neovim pipx
 
+# Use pipx instead of pip
+ln -sf /usr/bin/pipx /usr/local/bin/pip
+ln -sf /usr/bin/pipx /usr/local/bin/pip3
+
 # git configuration
 git config --global user.name Sushrut1101
 git config --global user.email guptasushrut@gmail.com
