@@ -30,7 +30,8 @@ pacman -Sy --needed --noconfirm \
 	libelf base-devel openssh lz4 jq go ncurses \
 	bison flex ninja uboot-tools z3 glibc dpkg \
 	multilib-devel bc htop python-setuptools   \
-	util-linux man-pages zsh dbus neovim python-pipx
+	util-linux man-pages zsh dbus neovim python-pipx \
+	perl-rename
 
 # More Packages
 pacman -Sy --needed --noconfirm \
@@ -64,13 +65,12 @@ pip install \
 pip install \
 	git+https://github.com/samloader/samloader.git
 
+# Use perl-rename by default
+ln -sf /usr/bin/perl-rename /usr/local/bin/rename
+
 # Create a non-root user for AUR
 useradd -m -G wheel -s /bin/bash testuser
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
-
-# AUR Packages
-sudo -u testuser yay -S --needed --noconfirm \
-	rename
 
 # Try to update yay
 sudo -u testuser yay -S --noconfirm yay
