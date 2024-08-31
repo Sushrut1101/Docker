@@ -31,7 +31,7 @@ pacman -Sy --needed --noconfirm \
 	bison flex ninja uboot-tools z3 glibc dpkg \
 	multilib-devel bc htop python-setuptools   \
 	util-linux man-pages zsh dbus neovim python-pipx \
-	perl-rename
+	less perl-rename
 
 # More Packages
 pacman -Sy --needed --noconfirm \
