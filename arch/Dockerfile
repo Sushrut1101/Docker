@@ -30,5 +30,8 @@ RUN bash /tmp/scripts/common.sh
 # Remove the Scripts we used
 RUN rm -rf /tmp/{{install_packages,config}.sh,remove,scripts,packages}
 
+# Set default editor
+ENV EDITOR=nvim
+
 # docker run command
 CMD ["/sbin/init", "--log-target=journal"]
