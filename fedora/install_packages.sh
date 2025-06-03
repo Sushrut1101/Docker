@@ -24,7 +24,7 @@ dnf install --skip-unavailable -y \
 	bc ag unace sharutils uudeview arj cabextract \
 	file-roller dtc brotli axel detox cpio lz4 \
 	python3-devel xz-devel speedtest-cli zsh \
-	util-linux-user wget fastfetch
+	util-linux-user wget fastfetch hyfetch
 
 # Install 7zz
 URL_7ZZ="$(curl -sL https://api.github.com/repos/ip7z/7zip/releases/latest | grep -oP '(?<="browser_download_url": ")[^"]*linux-x64\.tar\.xz')"
