@@ -25,7 +25,7 @@ pacman -Syyu --needed --noconfirm 2>&1 | grep -v "warning: could not get file in
 pacman -Sy --needed --noconfirm \
 	sudo nano git curl wget rsync aria2 rclone \
 	python3 python-pip zip systemd cmake make \
-	neofetch speedtest-cli inetutils cpio repo \
+	fastfetch speedtest-cli inetutils cpio repo \
 	jdk8-openjdk lzip dpkg openssl ccache dbus \
 	libelf base-devel openssh lz4 jq go ncurses \
 	bison flex ninja uboot-tools z3 glibc dpkg \
