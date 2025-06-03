@@ -111,15 +111,15 @@ elif [[ "$(command -v dnf)" != "" ]]; then
     sleep 1
 
     # Packages
-    sudo dnf install -y \
+    sudo dnf install --skip-unavailable -y \
         android-tools autoconf213 bison bzip2 ccache curl patch \
         flex gawk gcc-c++ git glibc-devel glibc-static libstdc++-static \
         libX11-devel make mesa-libGL-devel ncurses-devel openssl \
         zlib-devel ncurses-devel.i686 readline-devel.i686 vim lzip \
         libX11-devel.i686 mesa-libGL-devel.i686 glibc-devel.i686 \
-        libstdc++.i686 libXrandr.i686 zip perl-Digest-SHA python2 wget \
-        lzop openssl-devel java-1.8.0-openjdk-devel ImageMagick \
-        schedtool vboot-utils
+        libstdc++.i686 libXrandr.i686 zip perl-Digest-SHA wget \
+        lzop openssl-devel ImageMagick schedtool vboot-utils \
+        openssl-devel-engine
 
     # The package libncurses5 is not available, so we need to hack our way by symlinking the required library.
     sudo ln -s /usr/lib/libncurses.so.6 /usr/lib/libncurses.so.5

@@ -17,14 +17,14 @@ dnf update -y
 dnf upgrade -y
 
 # Install basic packages
-dnf install -y \
-	sudo git nano neofetch tmate aria2 rsync rclone \
-	python python2 zip unzip jq neovim pipx \
+dnf install --skip-unavailable -y \
+	sudo git nano tmate aria2 rsync rclone \
+	python zip unzip jq neovim pipx \
 	unrar python3-pip tmate make cmake clang glibc \
 	bc ag unace sharutils uudeview arj cabextract \
 	file-roller dtc brotli axel detox cpio lz4 \
 	python3-devel xz-devel speedtest-cli zsh \
-	util-linux-user
+	util-linux-user wget
 
 # Install 7zz
 URL_7ZZ="$(curl -sL https://api.github.com/repos/ip7z/7zip/releases/latest | grep -oP '(?<="browser_download_url": ")[^"]*linux-x64\.tar\.xz')"
