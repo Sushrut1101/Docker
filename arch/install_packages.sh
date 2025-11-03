@@ -75,10 +75,6 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 # Try to update yay
 sudo -u testuser yay -S --noconfirm yay
 
-# zsh
-chsh -s /bin/zsh root
-sh -c "$(curl -sL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 # Setup systemd
 find /etc/systemd/system /lib/systemd/system -path '*.wants/*' -not -name '*dbus*' -not -name '*journald*' -not -name '*systemd-tmpfiles*' -not -name '*systemd-user-sessions*' -exec rm -rf {} \;
 systemctl set-default multi-user.target

@@ -41,10 +41,6 @@ git config --global user.name Sushrut1101
 git config --global user.email guptasushrut@gmail.com
 git config --global color.ui auto
 
-# zsh
-chsh -s /bin/zsh root
-curl -sL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh
-
 # Android build Environment
 bash /tmp/scripts/android_build_env.sh
 
