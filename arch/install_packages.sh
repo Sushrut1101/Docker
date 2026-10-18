@@ -38,7 +38,7 @@ pacman -Sy --needed --noconfirm \
 	tmate tmux screen mlocate unace unrar 7zip \
 	sharutils uudeview arj cabextract file-roller \
 	dtc brotli axel gawk detox clang gcc gcc-libs \
-	flatpak libxcrypt-compat hyfetch
+	flatpak libxcrypt-compat hyfetch upterm
 
 # Downgrade `unzip` - from archlinuxcn
 yes | pacman -S archlinuxcn/unzip
