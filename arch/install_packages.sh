@@ -24,13 +24,13 @@ pacman -Syyu --needed --noconfirm 2>&1 | grep -v "warning: could not get file in
 # Install Basic Packages
 pacman -Sy --needed --noconfirm \
 	sudo nano git curl wget rsync aria2 rclone \
-	python3 python-pip zip systemd cmake make \
+	python3 zip systemd cmake make \
 	fastfetch speedtest-cli inetutils cpio repo \
 	jdk8-openjdk lzip dpkg openssl ccache dbus \
 	libelf base-devel openssh lz4 jq go ncurses \
 	bison flex ninja uboot-tools z3 glibc dpkg \
 	multilib-devel bc htop python-setuptools   \
-	util-linux man-pages zsh dbus neovim python-pipx \
+	util-linux man-pages zsh dbus neovim \
 	less perl-rename
 
 # More Packages
@@ -47,23 +47,8 @@ yes | pacman -S archlinuxcn/unzip
 pacman -S --needed --noconfirm \
     python2 yay
 
-# Use pipx instead of pip
-ln -sf /usr/bin/pipx /usr/local/bin/pip
-ln -sf /usr/bin/pipx /usr/local/bin/pip3
-
-# python and pip version
-python --version; pip --version
-
-# Install Some pip packages
-pip install \
-	twrpdtgen telegram-send backports.lzma docopt \
-	extract-dtb protobuf pycrypto docopt zstandard \
-	setuptools future requests humanize clint lz4 \
-	pycryptodome
-
-# pip git packages
-pip install \
-	git+https://github.com/samloader/samloader.git
+# python version
+python --version;
 
 # Use perl-rename by default
 ln -sf /usr/bin/perl-rename /usr/local/bin/rename

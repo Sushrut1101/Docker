@@ -19,8 +19,8 @@ dnf upgrade -y
 # Install basic packages
 dnf install --skip-unavailable -y \
 	sudo git nano tmate aria2 rsync rclone \
-	python zip unzip jq neovim pipx \
-	unrar python3-pip tmate make cmake clang glibc \
+	python zip unzip jq neovim \
+	unrar tmate make cmake clang glibc \
 	bc ag unace sharutils uudeview arj cabextract \
 	file-roller dtc brotli axel detox cpio lz4 \
 	python3-devel xz-devel speedtest-cli zsh \
@@ -31,10 +31,6 @@ URL_7ZZ="$(curl -sL https://api.github.com/repos/ip7z/7zip/releases/latest | gre
 wget "${URL_7ZZ}" -O 7zz.tar.xz
 tar -xJf 7zz.tar.xz -C /usr/local/bin 7zz 7zzs
 rm 7zz.tar.xz
-
-# Use pipx instead of pip
-ln -sf /usr/bin/pipx /usr/local/bin/pip
-ln -sf /usr/bin/pipx /usr/local/bin/pip3
 
 # git configuration
 git config --global user.name Sushrut1101
